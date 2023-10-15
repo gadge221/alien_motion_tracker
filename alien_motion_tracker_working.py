@@ -229,9 +229,10 @@ def main():
 	sound = 1
 	arc_x = 360
 	arc_y = 590
-	arc_width = 0.1
-	arc_height = 0.1
-
+	ARC_WIDTH = 9.1
+	ARC_HEIGHT = 2*5.75
+        arc_width = ARC_WIDTH
+	arc_height = ARC_HEIGHT
 	pygame.init()
 	# hide mouse icon
 	pygame.mouse.set_visible(False)
@@ -319,7 +320,7 @@ def main():
 
 		# draw the arc animation
 		if loop_counter <=75:
-			pygame.draw.arc(screen, WHITE, [arc_x, arc_y, arc_width, arc_height], 0.5236, 2.618,4)
+			pygame.draw.arc(screen, WHITE, [int(arc_x), int(arc_y), int(arc_width), int(arc_height)], 0.5236, 2.618,4)
 			arc_x = arc_x - 4.45
 			arc_y = arc_y - 6.58
 			arc_width = arc_width + 9.1
@@ -328,8 +329,8 @@ def main():
 			loop_counter = 1
 			arc_x = 360
 			arc_y = 590
-			arc_width = 0.1
-			arc_height = 0.1
+			arc_width = ARC_WIDTH
+			arc_height = ARC_HEIGHT
 
 		# mode 1 is a demo mode that will output data without
 		# using any sensors
